@@ -27,6 +27,9 @@ const [loggedInUser,setLoggedInUser] = useState({});
             <Route path="/login">
               <Login />
             </Route>
+            <PrivateRoute path="/book">
+              <Book />
+            </PrivateRoute>
             <PrivateRoute path="/book/:bedType">
               <Book />
             </PrivateRoute>
