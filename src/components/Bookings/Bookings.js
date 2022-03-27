@@ -17,6 +17,8 @@ const Bookings = () => {
         .then(data=>setBookings(data))
     },[])
 // see backend also for total change
+
+// after get,see get route of server to read
     return (
         <div>
             <h3>You Have: {bookings.length} Bookings </h3>
