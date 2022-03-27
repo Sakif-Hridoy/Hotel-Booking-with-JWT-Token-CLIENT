@@ -10,6 +10,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import { Button } from '@material-ui/core';
+import Bookings from '../Bookings/Bookings';
 
 const Book = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext)
@@ -85,7 +86,7 @@ const Book = () => {
 </Button>
     </MuiPickersUtilsProvider>
  
-
+<Bookings></Bookings>
         </div>
     );
 };
