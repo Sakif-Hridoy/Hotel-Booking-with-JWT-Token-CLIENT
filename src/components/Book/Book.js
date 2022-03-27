@@ -20,8 +20,17 @@ const Book = () => {
       checkOut: new Date()
     });
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+    
+  const handleCheckInDate = (date) => {
+    const newDates = {...selectedDate};
+    newDates.checkIn = date
+    setSelectedDate(newDates);
+  };
+
+  const handleCheckOutDate = (date) => {
+    const newDates = {...selectedDate};
+    newDates.checkOut = date
+    setSelectedDate(newDates);
   };
 
     return (
@@ -40,7 +49,7 @@ const Book = () => {
           id="date-picker-inline"
           label="Date picker inline"
           value={selectedDate.checkIn}
-          onChange={handleDateChange}
+          onChange={handleCheckInDate}
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}
@@ -51,7 +60,7 @@ const Book = () => {
           label="Date picker dialog"
           format="MM/dd/yyyy"
           value={selectedDate.checkOut}
-          onChange={handleDateChange}
+          onChange={handleCheckOutDate}
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}
