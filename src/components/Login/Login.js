@@ -51,6 +51,7 @@ const { from } = location.state || { from: { pathname: "/" } };
 // Retrive idToken from firebase,store idToken
       const storeAuthToken = () =>{
         firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+          // get token in console
           console.log(idToken)
           // ...
         }).catch(function(error) {
