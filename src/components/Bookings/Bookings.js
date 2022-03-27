@@ -10,7 +10,7 @@ const Bookings = () => {
         .then(res=> res.json())
         .then(data=>setBookings(data))
     },[])
-
+// see backend also for total change
     return (
         <div>
             <h3>You Have: {bookings.length} Bookings </h3>
